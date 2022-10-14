@@ -12,7 +12,7 @@ namespace APP.Systems.Cube
         private List<GameObject> cubePrefabs;
 
         [SerializeField]
-        private int maxCubesSpawn = 5;
+        private int maxCubesSpawn = 7;
         #endregion
 
         #region Private Fields

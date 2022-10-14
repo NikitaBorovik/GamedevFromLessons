@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using APP.Systems.Cube;
 using UnityEngine;
 
-public class App : MonoBehaviour
+namespace APP
 {
-    [SerializeField]
-    private CubeSystem cubeSystem;
-    [SerializeField]
-    private ObjectsContainer objectsContainer;
-
-    void Start()
+    public class App : MonoBehaviour
     {
-        cubeSystem.Init(objectsContainer.Spawner.transform);
-    }
+        [SerializeField]
+        private CubeSystem cubeSystem;
+        [SerializeField]
+        private ObjectsContainer objectsContainer;
 
-    void Update()
-    {
-        
+        void Start()
+        {
+            cubeSystem.Init(objectsContainer.Spawner.transform);
+        }
+
+        void Update()
+        {
+
+        }
     }
 }

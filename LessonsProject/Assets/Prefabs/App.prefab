@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeSystem: {fileID: 4029568704746504520}
+  objectsContainer: {fileID: 0}
 --- !u!1 &7278464612876230129
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,6 +86,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 961429934563441884}
     m_Modifications:
+    - target: {fileID: 5427002784956714461, guid: 400dc15ad0a9147f894b6a8891b0e8cd, type: 3}
+      propertyPath: maxCubesSpawn
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6055816182208479858, guid: 400dc15ad0a9147f894b6a8891b0e8cd, type: 3}
       propertyPath: m_Name
       value: Systems
