@@ -65,7 +65,7 @@ namespace APP.Systems.Cube
             for(int i = 0; i < count; i++)
             {
                 //random cube type
-                int randomCubeType = Random.Range(0, cubePrefabs.Count - 1);
+                int randomCubeType = Random.Range(0, cubePrefabs.Count);
 
                 //cube prefab instance generation on scene
                 GameObject newCube = GameObject.Instantiate(cubePrefabs[randomCubeType], spawner);
