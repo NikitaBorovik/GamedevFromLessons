@@ -6,4 +6,6 @@ public interface IInputSystemListener
 {
     void UserClick(Vector3 position);
     void UserMovement(Vector3 movement);
+
+    void UserJump();
 }

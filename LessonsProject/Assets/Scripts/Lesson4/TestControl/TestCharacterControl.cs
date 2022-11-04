@@ -29,5 +29,10 @@ public class TestCharacterControl : MonoBehaviour, IInputSystemListener
     {
         GameObject newProjectile = Instantiate(projectile, projectileSpawner.position, transform.rotation);
     }
+    public void UserJump()
+    {
+        if(Mathf.Abs(playerRigidbody.velocity.y) <= 0.001)
+        playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x,5f, playerRigidbody.velocity.z);
+    }
 
 }

@@ -11,6 +11,9 @@ public class InputSystem : MonoBehaviour
 
     private bool isInited;
 
+    [SerializeField]
+    private Joystick joystick;
+
     private void Start()
     {
         listenersList = new List<IInputSystemListener>();
@@ -48,10 +51,19 @@ public class InputSystem : MonoBehaviour
             {
 
             }
+            if (Input.GetButton("Jump"))
+            {
+                foreach (IInputSystemListener listener in listenersList)
+                {
+                    listener.UserJump();
+                }
+            }
+
+            
 
             //universal - wasd, arrows, controller
-            float movementV = Input.GetAxis("Vertical");
-            float movementH = Input.GetAxis("Horizontal");
+            float movementV = joystick.Vertical;
+            float movementH = joystick.Horizontal;
 
             if (movementV != 0 || movementH != 0)
             {
@@ -63,6 +75,7 @@ public class InputSystem : MonoBehaviour
                     listener.UserMovement(movementDirection);
                 }
             }
+
         }
     }
 }
